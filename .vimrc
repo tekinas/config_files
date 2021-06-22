@@ -10,7 +10,6 @@ Plug 'preservim/nerdtree'
 Plug 'psliwka/vim-smoothie'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'rhysd/vim-clang-format'
 Plug 'doums/darcula'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe'
@@ -20,10 +19,12 @@ call plug#end()
 
 set number
 set relativenumber
+set autoindent
 
+"colorscheme molokai
+"let g:molokai_original = 1
 
-colorscheme molokai
-let g:molokai_original = 1
+colorscheme darcula
 
 set background=dark
 
@@ -41,9 +42,10 @@ set shortmess-=S
 
 map <F3> :NERDTreeToggle<CR>
 map <c-p> :FZF<CR>
-map <c-k> :ClangFormat<CR>
+map <c-k> :YcmCompleter Format<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
+set nowrap
 set incsearch
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
