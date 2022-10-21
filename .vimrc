@@ -1,5 +1,6 @@
 set encoding=utf-8
 set nocompatible
+set backspace=indent,eol,start
 filetype plugin on
 
 if has('python3')
