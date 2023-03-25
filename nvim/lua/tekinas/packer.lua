@@ -1,17 +1,16 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'Mofiqul/dracula.nvim'
     use 'doums/darcula'
+    use 'tanvirtin/monokai.nvim'
     use 'navarasu/onedark.nvim'
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use 'tpope/vim-fugitive'
     use 'preservim/nerdtree'
     use 'ibhagwan/fzf-lua'
+    use 'nvim-tree/nvim-web-devicons'
     use 'mbbill/undotree'
     use 'psliwka/vim-smoothie'
     use {
@@ -33,5 +32,12 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },                  -- Required
             { 'rafamadriz/friendly-snippets' },      -- Optional
         }
+    }
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {}
+        end
     }
 end)

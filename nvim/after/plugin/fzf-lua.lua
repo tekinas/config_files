@@ -6,4 +6,3 @@ vim.keymap.set('n', '<leader>sw', builtin.grep, { noremap = true, silent = true 
 vim.keymap.set('n', '<leader>sc', builtin.grep_cword, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep_native, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>sd', builtin.diagnostics_document, { noremap = true, silent = true })
