@@ -1,3 +1,5 @@
+require("tekinas.packer")
+
 vim.g.mapleader = " "
 
 vim.opt.guicursor = ""

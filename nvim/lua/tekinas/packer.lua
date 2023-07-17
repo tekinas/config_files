@@ -1,12 +1,11 @@
-vim.cmd [[packadd packer.nvim]]
-
+vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'Mofiqul/dracula.nvim'
     use 'doums/darcula'
+    use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
     use 'tanvirtin/monokai.nvim'
-    use 'navarasu/onedark.nvim'
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
     use 'tpope/vim-fugitive'
     use 'preservim/nerdtree'
     use 'ibhagwan/fzf-lua'
